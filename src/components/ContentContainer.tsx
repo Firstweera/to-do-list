@@ -6,15 +6,15 @@ interface ContentContainerProps {
   className?: string;
 }
 
-const ContentContainer: FC<ContentContainerProps> = ({
+export const ContentContainer: FC<ContentContainerProps> = ({
   children,
   className,
 }) => {
   return (
-    <div className={clsx("sm:tw-px-12 tw-px-4 tw-py-6 tw-mb-10", className)}>
+    <div className={clsx("sm:px-12 px-4 py-6 mb-10", className)}>
       {children}
     </div>
   );
 };
 
-export default ContentContainer;
+
