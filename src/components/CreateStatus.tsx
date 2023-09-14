@@ -1,6 +1,24 @@
+import { useEffect, useState } from "react";
 import { ModalCreate } from ".";
 
 export const CreateStatus = () => {
+  const [currentTime, setCurrentTime] = useState<Date>(new Date());
+
+    // Update the current time every second
+    useEffect(() => {
+      const intervalId = setInterval(() => {
+        setCurrentTime(new Date());
+      }, 1000);
+  
+      // Clear the interval when the component unmounts
+      return () => clearInterval(intervalId);
+    }, []);
+
+  const datePart = currentTime.toLocaleDateString();
+  const timePart = currentTime.toLocaleTimeString();
+
+  // console.log("datePart", datePart);
+
   const openModal = () => {
     const modal = document.getElementById("createWorkStatus");
     if (modal instanceof HTMLDialogElement) {
@@ -8,16 +26,10 @@ export const CreateStatus = () => {
     }
   };
 
-  const dateTime = new Date();
-  const datePart = dateTime.toLocaleDateString();
-  const timePart = dateTime.toLocaleTimeString();
-
-  // console.log("datePart", datePart);
-
   return (
     <div className="flex justify-between items-center">
       <div>
-        <button className="btn" onClick={openModal}>
+        <button className="btn bg-white border-black" onClick={openModal}>
           Create Work Status
         </button>
         {/*// Modal Work Status //*/}

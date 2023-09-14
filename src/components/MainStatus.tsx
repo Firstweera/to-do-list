@@ -116,10 +116,13 @@ export const MainStatus = (props: { mockGroup: TGroup[] }) => {
     <>
       {mockGroup?.map((item: TGroup, idx: number) => (
         <div className="w-full" key={idx}>
-          <div className="card bg-base-100 shadow-xl hover:bg-slate-100">
+          <div className="card bg-base-100 shadow-xl overflow-y-auto h-screen hover:bg-slate-100">
             <div className="card-body">
               <div className="card-title justify-between content-center">
-                <h2>{item.title} / 0</h2>
+                <h3>
+                  {item.title} /{" "}
+                  {mockTask?.filter((i: any) => i.groupId === item.id).length}
+                </h3>
                 <div className="card-actions">
                   <button
                     className="btn btn-square btn-sm text-xl"
@@ -129,6 +132,7 @@ export const MainStatus = (props: { mockGroup: TGroup[] }) => {
                   </button>
                 </div>
               </div>
+
               <div className="divider -mt-2"></div>
 
               {/*task*/}
