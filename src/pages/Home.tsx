@@ -6,7 +6,7 @@ export const HomePage = () => {
       className="hero min-h-screen"
       style={{
         backgroundImage:
-          "url(https://daisyui.com/images/stock/photo-1507358522600-9f71e620c44e.jpg)",
+          "url(https://cdn.pixabay.com/photo/2016/11/29/06/18/apple-1867762_1280.jpg)",
       }}
     >
       <div className="hero-overlay bg-opacity-60"></div>

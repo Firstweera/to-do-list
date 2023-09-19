@@ -11,7 +11,7 @@ export const ContentContainer: FC<ContentContainerProps> = ({
   className,
 }) => {
   return (
-    <div className={clsx("sm:px-12 px-4 py-6 mb-10", className)}>
+    <div className={clsx("sm:px-12 px-4 py-6 mb-10 bg-slate-200 max-h-screen max-w-screen", className)}>
       {children}
     </div>
   );

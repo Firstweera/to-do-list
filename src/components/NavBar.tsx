@@ -1,10 +1,10 @@
 export const NavBar = () => {
   return (
     <>
-      <div className="navbar bg-base-100 fixed top-0 left-0 z-50">
+      <div className="navbar bg-base-100 fixed top-0 left-0 z-50 shadow-md">
         <div className="navbar-start"></div>
         <div className="navbar-center">
-          <a className="btn btn-ghost normal-case text-xl">To-Do list</a>
+          <a href="/" className="btn btn-ghost normal-case text-xl">To-Do list</a>
         </div>
         <div className="navbar-end">
           <div className="dropdown dropdown-end">
@@ -35,7 +35,7 @@ export const NavBar = () => {
                 <a href="/login">Login</a>
               </li>
               <li>
-                <a>Register</a>
+                <a href="/register">Register</a>
               </li>
               <li>
                 <a href="/main">Main</a>

@@ -116,25 +116,23 @@ export const MainStatus = (props: { mockGroup: TGroup[] }) => {
     <>
       {mockGroup?.map((item: TGroup, idx: number) => (
         <div className="w-full" key={idx}>
-          <div className="card bg-base-100 shadow-xl overflow-y-auto h-screen hover:bg-slate-100">
-            <div className="card-body">
-              <div className="card-title justify-between content-center">
-                <h3>
-                  {item.title} /{" "}
-                  {mockTask?.filter((i: any) => i.groupId === item.id).length}
-                </h3>
-                <div className="card-actions">
-                  <button
-                    className="btn btn-square btn-sm text-xl"
-                    onClick={openModal}
-                  >
-                    +
-                  </button>
-                </div>
+          <div className="card bg-slate-100 shadow-xl overflow-y-auto h-[500px] hover:bg-slate-300 static z-0 w-full">
+            <div className="card-title content-center w-[482px] absolute z-40 py-5 px-8 bg-primary rounded-t-lg shadow-lg">
+              <h3 className="text-white">
+                {item.title} /{" "}
+                {mockTask?.filter((i: any) => i.groupId === item.id).length}
+              </h3>
+              <div className="card-actions">
+                <button
+                  className="btn btn-square btn-sm text-xl"
+                  onClick={openModal}
+                >
+                  +
+                </button>
               </div>
+            </div>
 
-              <div className="divider -mt-2"></div>
-
+            <div className="card-body mt-20">
               {/*task*/}
               {mockTask
                 ?.filter((r: any) => r.groupId === item.id)
