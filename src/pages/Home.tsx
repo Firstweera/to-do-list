@@ -14,9 +14,10 @@ export const HomePage = () => {
         <div className="max-w-md">
           <h1 className="mb-5 text-5xl font-bold">Hello there</h1>
           <p className="mb-5">
-            Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda
-            excepturi exercitationem quasi. In deleniti eaque aut repudiandae et
-            a id nisi.
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi
+            ducimus velit est numquam! Nulla labore voluptatibus voluptas
+            suscipit voluptate, est quibusdam aliquam, fugiat cum, dolorem neque
+            hic ratione doloribus culpa!
           </p>
           <Link to="/login">
             <button className="btn btn-primary">Go to Login !</button>
